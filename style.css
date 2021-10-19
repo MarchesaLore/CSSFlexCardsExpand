@@ -1,0 +1,41 @@
+
+.repeater-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.gallery-container {
+    margin-top: 30px;
+    height: 150px;
+}
+.gallery-item:hover {
+    background-color: #ccc;
+}
+.gallery-item {
+    display: flex;
+    max-height: 150px;
+    cursor: pointer;
+    padding-right: 0;
+    z-index: 0;
+}
+.read-bio {
+    font-size: 14px;
+    color: #0071b7;
+}
+.gallery-item img {
+    max-height: 150px;
+    max-width: 150px;
+    z-index: 0;
+}
+.gallery-item .text-area{
+ width:100%;
+ padding:10px;
+ background-color: #eee;
+}
+.description {
+    background-color: #eee;
+    padding: 15px;
+    z-index: 999;
+    line-height: 1.5;
+    position: relative;
+}
