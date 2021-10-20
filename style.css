@@ -1,9 +1,10 @@
 
 .repeater-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /*2 columns for the cards*/
     grid-gap: 15px;
 }
+
 .gallery-container {
     margin-top: 30px;
     height: 150px;
@@ -16,7 +17,7 @@
     max-height: 150px;
     cursor: pointer;
     padding-right: 0;
-    z-index: 0;
+    z-index: 0; /* the gallery card need to be behind the description when a previous card open up*/
 }
 .read-bio {
     font-size: 14px;
@@ -28,14 +29,14 @@
     z-index: 0;
 }
 .gallery-item .text-area{
- width:100%;
- padding:10px;
- background-color: #eee;
+    width:100%;
+    padding:10px;
+    background-color: #eee;
 }
 .description {
     background-color: #eee;
     padding: 15px;
-    z-index: 999;
+    z-index: 999;/*the description of the card need to be over the other items that follow*/
     line-height: 1.5;
-    position: relative;
+    position: relative;/*position need to be relative so that it will not move the other gallery items*/
 }

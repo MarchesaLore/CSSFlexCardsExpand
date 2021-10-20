@@ -133,18 +133,21 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script>
+    /*I needed to change the description to be visible on the click of the card and to be hidden when the previous status was visible */
 jQuery(".gallery-item").on('click', function (event) {
-var panel = this.nextElementSibling;
-var rememberStatus = (panel.style.display === "block");
-$('.description').each(function (i, obj) {
-this.style.display = "none";
-});
-if (rememberStatus) {
-panel.style.display = "none";
-} else {
-panel.style.display = "block";
-}
-event.stopImmediatePropagation();
+    var panel = this.nextElementSibling;
+    var rememberStatus = (panel.style.display === "block");
+    $('.description').each(function (i, obj) {
+        this.style.display = "none";
+    });
+    
+    if (rememberStatus) {
+        panel.style.display = "none";
+    } else {
+        panel.style.display = "block";
+    }
+
+    event.stopImmediatePropagation();
 });
 
 </script>
