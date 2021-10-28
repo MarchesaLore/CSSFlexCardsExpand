@@ -1,27 +1,27 @@
-
 .repeater-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /*2 columns for the cards*/
     grid-gap: 15px;
 }
-
+@media only screen and (max-width: 850px) {
+    .repeater-container {
+        grid-template-columns: 1fr; /*mobile & smaller screens single column */
+    }
+  }
+  
 .gallery-container {
-    margin-top: 30px;
-    height: 150px;
+    height: 200px;    
+    box-shadow: 1px 3px 2px #333;/*box shadow here and on teh description but no on the gallery item*/
 }
 .gallery-item:hover {
     background-color: #ccc;
 }
 .gallery-item {
     display: flex;
-    max-height: 150px;
+    height: 200px;
     cursor: pointer;
     padding-right: 0;
     z-index: 0; /* the gallery card need to be behind the description when a previous card open up*/
-}
-.read-bio {
-    font-size: 14px;
-    color: #0071b7;
 }
 .gallery-item img {
     max-height: 150px;
@@ -33,10 +33,29 @@
     padding:10px;
     background-color: #eee;
 }
-.description {
+div.description {
     background-color: #eee;
     padding: 15px;
     z-index: 999;/*the description of the card need to be over the other items that follow*/
     line-height: 1.5;
-    position: relative;/*position need to be relative so that it will not move the other gallery items*/
+    position: relative;/*position need to be relative so that it will not move the other gallery items*/    
+    box-shadow: 1px 3px 2px #333;
 }
+div.image {
+    /*centering the image with flex*/
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.read-bio{
+background: #333;
+padding: 5px;
+border-radius: 5px;
+color: #fff;
+float: right;
+}
+h3{
+    margin:2px;
+}
+
